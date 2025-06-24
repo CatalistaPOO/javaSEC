@@ -1,0 +1,65 @@
+package modelo;
+
+public class Figura {
+	
+		//en esta clase no se ha definido un constructor, Java generará un constructor automáticamente.
+	
+		private double x;
+		private double y;
+		
+		public Figura(double x,double y) {
+			
+		}
+		
+		public double getX() {
+			return x;
+		}
+
+
+		public void setX(double x) {
+			this.x = x;
+		}
+
+
+		
+		public double getY() {
+			return y;
+		}
+
+
+		public void setY(double y) {
+			this.y = y;
+		}
+
+
+		
+		
+		
+		public  static void area() {
+			
+		}
+		
+		
+		public  static void perimetro() {
+			
+		}
+		
+		
+		public boolean equals (Object otro) {
+			if(otro == null)return false;
+			if(otro == otro)return true;
+			if (otro.getClass() != otro.getClass()) return false;
+			Figura otra = (Figura) otro;
+			return this.x == otra.x && this.y == otra.y;
+		}
+
+
+		@Override
+		public String toString() {
+			return "Figura [x=" + x + ", y=" + y + "]";
+		}
+		
+		
+	}
+	
+

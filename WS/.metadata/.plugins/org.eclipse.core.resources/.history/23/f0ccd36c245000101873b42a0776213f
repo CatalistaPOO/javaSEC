@@ -1,0 +1,19 @@
+package modelo;
+
+public class Rectangulo {
+	public static void main(String[]Args) {
+		
+		
+		
+		
+		public static void area() {
+			return area;
+		}
+		
+		
+		public static void perimetro() {
+			return perimetro;
+		}
+		
+	}
+}
