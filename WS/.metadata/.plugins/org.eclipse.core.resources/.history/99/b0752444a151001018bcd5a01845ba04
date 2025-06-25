@@ -73,12 +73,6 @@ public abstract class Figura {
 			return redondeado;
 		}
 		
-//		public static double redondeos(double... numero) {
-//			for (int i = 0; i < numero.length; i++) {
-//			return Math.round(numero[i] * 100.0) / 100.0;
-//			}
-//		}
-		
 		
 		public boolean equals (Object otro) {
 			if(otro == null)return false;
