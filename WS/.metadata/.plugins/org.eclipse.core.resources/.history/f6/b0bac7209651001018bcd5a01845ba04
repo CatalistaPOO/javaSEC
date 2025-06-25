@@ -47,8 +47,8 @@ public abstract class Figura {
 		
 		
 		public static Punto getCentroMasa(Figura... figurita) {
-			//crear Punto y variables
-//			Punto centroMasas = new Punto (0,0);
+			//almacenar en arrays?
+			Punto centroMasas;
 			double cMasaX = 0;
 			double cMasaY = 0;
 			double sumatorioAreas = 0;
@@ -59,14 +59,15 @@ public abstract class Figura {
 				cMasaY += figurita[i].getY() * figurita[i].area();
 				sumatorioAreas += figurita[i].area();
 			}
-			//definicion de objeto punto
-//			centroMasas.setX(cMasaX/ sumatorioAreas);
-//			centroMasas.setY( cMasaY/sumatorioAreas);
-//			return centroMasas;	
-			return new Punto (cMasaX/sumatorioAreas, cMasaY/sumatorioAreas);
+			centroMasas.setX(cMasaX/ sumatorioAreas);
+			centroMasas.setY( cMasaY/sumatorioAreas);
+			return centroMasas;	
 		}
 
 			
+			
+		
+		
 		
 		public static double redondeo(double numero) {
 			double redondeado = Math.round(numero * 100.0) / 100.0;

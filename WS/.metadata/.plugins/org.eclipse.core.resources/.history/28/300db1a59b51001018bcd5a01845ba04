@@ -27,15 +27,6 @@ public Punto() {}
 	public void setY(double y) {
 		this.y = y;
 	}
-	
-	
-	public boolean equals (Object otro) {
-		if(otro == null)return false;
-		if(otro == otro)return true;
-		if (otro.getClass() != otro.getClass()) return false;
-		Punto otra = (Punto) otro;
-		return this.x == otra.x && this.y == otra.y;
-	} 
 
 	@Override
 	public String toString() {

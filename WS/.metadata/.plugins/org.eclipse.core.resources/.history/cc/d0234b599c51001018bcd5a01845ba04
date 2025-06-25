@@ -48,7 +48,7 @@ public abstract class Figura {
 		
 		public static Punto getCentroMasa(Figura... figurita) {
 			//crear Punto y variables
-//			Punto centroMasas = new Punto (0,0);
+			Punto centroMasas = new Punto (0,0);
 			double cMasaX = 0;
 			double cMasaY = 0;
 			double sumatorioAreas = 0;
@@ -60,10 +60,9 @@ public abstract class Figura {
 				sumatorioAreas += figurita[i].area();
 			}
 			//definicion de objeto punto
-//			centroMasas.setX(cMasaX/ sumatorioAreas);
-//			centroMasas.setY( cMasaY/sumatorioAreas);
-//			return centroMasas;	
-			return new Punto (cMasaX/sumatorioAreas, cMasaY/sumatorioAreas);
+			centroMasas.setX(cMasaX/ sumatorioAreas);
+			centroMasas.setY( cMasaY/sumatorioAreas);
+			return centroMasas;	
 		}
 
 			
