@@ -15,7 +15,8 @@ public class Test04CentroMasas {
 		Circulo c2 = new Circulo (3, 10, 5);
 		
 		Punto centroMasa = Figura.getCentroMasa(r1,r2,c1,c2);
-		System.out.println(centroMasa);
+		System.out.println("Coordenadas X,Y del punto de centro de masa: " + centroMasa);
+		System.out.println("cortando a dos decimales coordenadas X,Y de l punto: " + Figura.redondeo(centroMasa.getX()) + "," + Figura.redondeo(centroMasa.getY()) );
 		
 	}
 	
