@@ -40,13 +40,37 @@ public abstract class Figura {
 		
 		
 		
-		public abstract double area() {
-			return 0;
+		public abstract double area();
+		
+		
+		public abstract double perimetro();
+		
+		
+		public static Punto getCentroMasa(Figura... figurita) {
+			//almacenar en arrays?
+			Punto centroMasas;
+			double cMasaX = 0;
+			double cMasaY = 0;
+			double sumatorioAreas = 0;
+			
+			//bucle
+			for  (int i = 0; i <  figurita.length; i++) { 
+				cMasaX += figurita[i].getX() * figurita[i].area();
+				cMasaY += figurita[i].getY() * figurita[i].area();
+				sumatorioAreas += figurita[i].area();
+			}
+			centroMasas =  
+			return centroMasas;	
 		}
+
+			
+			
 		
 		
-		public abstract double perimetro() {
-			return 0;
+		
+		public static double redondeo(double numero) {
+			double redondeado = Math.round(numero * 100.0) / 100.0;
+			return redondeado;
 		}
 		
 		

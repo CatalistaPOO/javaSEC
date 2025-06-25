@@ -8,8 +8,8 @@ public class Test01 {
 	public static void  main(String[]args){
 		//en la clase no se ha inicializado pero al crear este nuevo objeto,
 		//los atributos x e y se inicializan a 0 (los booleanos a false, objetos a null, char a null)
-		Figura f = new Figura();
-		System.out.println(f); //devuelve: clase.objeto.hashcode( con @)
+//		Figura f = new Figura();//Figura, al ser clase abstracta, no permite la creación de un objeto
+//		System.out.println(f); //devuelve: clase.objeto.hashcode( con @)
 		
 		
 		//04Geometria
