@@ -1,0 +1,12 @@
+package ejercicicios.ejercicios05;
+
+public class Ej06 {
+	public static void main(String[] args) {
+//		Simula el lanzamiento de un dado de 6 caras utilizando números aleatorios.
+		
+		int nDado = (int)(Math.random() * 61);
+//		double x = x1*(1.0 - f) + x2*f;
+		System.out.println(nDado);
+		
+	}
+}

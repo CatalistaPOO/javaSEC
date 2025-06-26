@@ -7,7 +7,6 @@ import modelo.Punto;
 
 public class Test04CentroMasas {
 
-	
 	public static void main(String[] args) {
 		Rectangulo r1  =  new Rectangulo (1, 1, 2, 5);
 		Rectangulo r2  =  new Rectangulo (5, 2, 5, 10);
@@ -19,5 +18,7 @@ public class Test04CentroMasas {
 		System.out.println("cortando a dos decimales coordenadas X,Y de l punto: " + Figura.redondeo(centroMasa.getX()) + "," + Figura.redondeo(centroMasa.getY()) );
 		
 	}
+
+	
 	
 }
