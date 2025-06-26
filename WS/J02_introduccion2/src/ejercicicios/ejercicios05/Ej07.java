@@ -7,10 +7,22 @@ public class Ej07 {
 //		el número 371 es un numero de Armstrong, ya que 3^3 + 7^3 + 1^3 = 27 + 343 + 1 = 371.
 //		Números de Armstrong para probar: 371, 8_208, 4_210_818
 		
-		 seraNumArmstrong = 371;
-		 String largo = String.valueOf(seraNumArmstrong);
+		int  seraNumArmstrong = 371;
+		System.out.println(esNumeroArmstrong(seraNumArmstrong));
 		
-		for (int i = 0; i < String.valueOf(largo.length); i++)	{
-			
+	}
+
+	public static boolean esNumeroArmstrong(int nCheck){
+		String nToString = String.valueOf(nCheck);
+		double suma = 0;
+		for (int i = 0; i <nToString.length(); i++) {
+			double d1 = Character.getNumericValue(nToString.charAt(i));
+			double d2 = nToString.length();
+			System.out.println("Digito " + i + "del numero " + nCheck + ": " + d1);
+			suma += Math.pow(d1,d2);
+			System.out.println(nToString.length());
+			System.out.println(suma);
 		}
+		return suma == Double.valueOf(nCheck);
+	}
 }
