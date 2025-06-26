@@ -7,8 +7,8 @@ public class Ej07 {
 //		el número 371 es un numero de Armstrong, ya que 3^3 + 7^3 + 1^3 = 27 + 343 + 1 = 371.
 //		Números de Armstrong para probar: 371, 8_208, 4_210_818
 		
-		 seraNumArmstrong = 371;
-		 String largo = String.valueOf(seraNumArmstrong);
+		 esNumArmstrong = 371;
+		 String largo = String.valueOf(esNumArmstrong);
 		
 		for (int i = 0; i < String.valueOf(largo.length); i++)	{
 			
