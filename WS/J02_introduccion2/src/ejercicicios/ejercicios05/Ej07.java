@@ -1,6 +1,7 @@
 package ejercicicios.ejercicios05;
 
 public class Ej07 {
+	
 	public static void main(String[] args) {
 //		Escribe un programa que verifique si un número es un número Armstrong, es decir, si la suma
 //		de cada uno de sus dígitos elevado a la cantidad de dígitos es igual al número. Por ejemplo,
