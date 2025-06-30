@@ -6,7 +6,7 @@ public class Ej06 {
 		
 	}
 	
-	public static long potencia (int num, int exponent) {
+	public static double potencia (int num, int exponent) {
 		if (exponent == 0){
 			return Math.pow(num, exponent = 1);
 		}
