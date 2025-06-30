@@ -1,7 +1,0 @@
-package equals;
-
-public class Cliente {
-	public Cliente (int idCliente, String nombre,String apellidos){
-		
-	}
-}
