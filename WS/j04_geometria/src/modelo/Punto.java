@@ -1,6 +1,6 @@
 package modelo;
 
-public class Punto {
+public class Punto implements Dibujable {
 	private double x;
 	private double y;
 	
@@ -40,6 +40,12 @@ public Punto() {}
 	@Override
 	public String toString() {
 		return "Punto (" + x + "," + y + ")";
+	}
+
+	@Override
+	public void dibujar() {
+		System.out.println("Punto dibujado");
+		
 	}
 	
 	

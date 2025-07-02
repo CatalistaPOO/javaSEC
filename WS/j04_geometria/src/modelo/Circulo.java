@@ -1,7 +1,7 @@
 package modelo;
 
 
-public class Circulo extends Figura{
+public class Circulo extends Figura implements Dibujable{
 	
 	private double radio;
 	
@@ -44,6 +44,12 @@ public class Circulo extends Figura{
 	@Override
 	public String toString() {
 		return "Circulo [radio=" + radio + ", PI=" + Math.PI + "]";
+	}
+
+	@Override
+	public void dibujar() {
+		System.out.println("Circulo dibujado");
+		
 	}
 	
 }
