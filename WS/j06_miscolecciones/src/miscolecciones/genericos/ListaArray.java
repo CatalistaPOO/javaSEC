@@ -1,8 +1,8 @@
-package miscolecciones;
+package miscolecciones.genericos;
 
-public class ListaArray implements Lista{
+public class ListaArray<T> implements Lista<T>{
 	//propiedades
-	private String[]almacen;
+	private Object[]almacen;
 	private int cant;
 	
 	//constructores
@@ -13,12 +13,12 @@ public class ListaArray implements Lista{
 	
 	public ListaArray(int tamnyo) {
 		super();
-		almacen = new String [tamnyo];
+		almacen = new Object[tamnyo];
 	}
 	
 	//metodos de interface
 	@Override
-	public void agregar(String dato) {
+	public void agregar(T dato) {
 		// debemos indicar un lugar y cuando se llena crear otro nuevo
 		if(almacen.length == cant) {
 			redimensionar();
@@ -28,18 +28,19 @@ public class ListaArray implements Lista{
 	}
 
 	@Override
-	public String eliminar(int pos) {
+	public T eliminar(int pos) {
 		// a partir de pos, si es valido, copia los elementos un puesto atras
 		
 		return null;
 	}
 
+//	@SuppressWarnings("unchecked")//desactiva warning en este metodo
 	@Override
-	public String buscar(int pos) {
+	public T buscar(int pos) {
 		//Si mandan posicion incorrecta retorna null (podría haber retornado un exception)
 		if(pos < 0 || pos >= cant)
 			return null;
-		return almacen[pos];
+		return (T)almacen[pos];//casting
 	}
 
 	@Override
@@ -50,7 +51,7 @@ public class ListaArray implements Lista{
 
 	@Override
 	public int largo() {
-		// TODO Auto-generated method stub
+		// Devuelve cantidad de elementos
 		return cant;
 	}
 	
@@ -58,7 +59,7 @@ public class ListaArray implements Lista{
 	private void redimensionar() {
 		//crea un nuevo array del tamaño duplicado del que había y
 		//ese nuevo copia elementos y despues sobreescribe manteniendo nombre propiedad (almacen)
-		String[] nuevo = new String[almacen.length * 2];
+		Object[] nuevo = new Object[almacen.length * 2];
 		for (int i = 0; i < almacen.length; i++) {
 			nuevo[i] = almacen[i];
 		}
