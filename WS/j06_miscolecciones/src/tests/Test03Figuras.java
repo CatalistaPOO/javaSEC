@@ -17,6 +17,5 @@ public class Test03Figuras {
 		for (int i= 0; i<lista.largo(); i++) {
 			System.out.println(lista.buscar(i));
 		}
-
 	}
 }
