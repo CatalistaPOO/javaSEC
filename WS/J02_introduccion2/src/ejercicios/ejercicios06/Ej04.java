@@ -11,7 +11,7 @@ public class Ej04 {
 	public static int sumaDigitos(int num) {
 		String cantidadDigitos = String.valueOf(num);
 		int[] digitos = new int[cantidadDigitos.length()];
-		int index = 0;
+		//int index = 0;
 		if (num / 10 < 1) {
 			return digitos[0];
 		}
