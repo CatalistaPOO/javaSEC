@@ -9,7 +9,7 @@ public class Test01TreeSet {
 	
 	public static void main(String[] args) {
 		
-		Set<String> set= new TreeSet<>();
+		Set<String> set= new TreeSet<>(new StringComparatorCantLetras());
 		
 		set.add("uno");
 		set.add("dos");

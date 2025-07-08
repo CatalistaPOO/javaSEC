@@ -1,5 +1,8 @@
 package modelo;
 
+import java.text.Collator;
+import java.util.Comparator;
+import java.util.Locale;
 import java.util.Objects;
 
 
@@ -94,10 +97,30 @@ public class Cliente implements Comparable<Cliente> {//Implementa Comparable par
 	//ya que Cliente no tienen definido un orden por defecto (no conoce atributos)
 	@Override
 	public int compareTo(Cliente o) {
-		// Compara Cliente
+		// Compara Cliente, si devuelve positivo va despues,el negativo estará antes y si es igual es el mismo
 			return this.idCliente - o.idCliente;
 		}
 	
+	
+	//crear un metodo que retorne un Comparator por apellidos y nombre
+	//el método es static porque no interviene el objeto
+	public static Comparator<Cliente> getComparatorApellidos(){
+		//creamos 
+		return new Comparator<Cliente>() {
+		//Implementamos compare con dos objetos anonimos
+			@Override
+			public int compare(Cliente o1, Cliente o2) {
+				String nom1 = o1.apellido1 + o1.apellido2 + o1.nombre + o1.idCliente;
+				String nom2 = o2.apellido1 + o2.apellido2 + o2.nombre + o2.idCliente;
+				//definimos collator que plantea español(Locale("es") como referencia (Java 17, en 21 cambia)
+				//para poder procesar los caracteres españoles cuando usemos compare
+				Collator col = Collator.getInstance(new Locale("es"));
+				return col.compare(nom1, nom2);
+		}
+		
+	};
+	
+	}
 	
 	
 }

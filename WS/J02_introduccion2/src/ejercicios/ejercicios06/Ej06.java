@@ -3,6 +3,7 @@ package ejercicios.ejercicios06;
 public class Ej06 {
 	public static void main(String[] args) {
 //		Calcular la potencia
+		System.out.println(potencia(3,2));
 		
 	}
 	
