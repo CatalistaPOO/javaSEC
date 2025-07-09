@@ -57,7 +57,7 @@ public class ListaArray implements Lista{
 	//metodos propios
 	private void redimensionar() {
 		//crea un nuevo array del tamaño duplicado del que había y
-		//ese nuevo copia elementos y despues sobreescribe manteniendo nombre propiedad (almacen)
+		//ese nuevo copia elementos, despues nuevo se sustituye para poderdeguir usando la propiedad almacen
 		String[] nuevo = new String[almacen.length * 2];
 		for (int i = 0; i < almacen.length; i++) {
 			nuevo[i] = almacen[i];

@@ -18,9 +18,9 @@ public class TestHashMap {
 		Cliente c4 = new Cliente(516,"Susana", "García", "Pinto");
 		Cliente c5 = new Cliente(125,"Adriana", "Jimenez", "Perez");
 		
+		//		Map<Integer, Cliente> clientes= new HashMap<Integer, Cliente>();//mapa
 		//crear mapa clientes y llenarlo con los Clientes(c1,c2,c3,c4,c5)
-//		Map<Integer, Cliente> clientes= new HashMap<Integer, Cliente>();//mapa
-		Map<Integer, Cliente> clientes= new LinkedHashMap<Integer, Cliente>();//mapa creado manteniendo el orden de carga
+		Map<Integer, Cliente> clientes= new LinkedHashMap<Integer, Cliente>();//mapa creado estableciendo su orden natural en orden de carga.
 		clientes.put(c1.getIdCliente(),c1);
 		clientes.put(c2.getIdCliente(),c2);
 		clientes.put(c3.getIdCliente(),c3);

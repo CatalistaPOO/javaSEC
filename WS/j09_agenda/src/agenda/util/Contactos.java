@@ -6,6 +6,7 @@ import java.util.Set;
 import agenda.modelo.Contacto;
 import agenda.modelo.Domicilio;
 import agenda.persistencia.ContactoDao;
+import java.util.Set;
 
 public class Contactos {
 	
