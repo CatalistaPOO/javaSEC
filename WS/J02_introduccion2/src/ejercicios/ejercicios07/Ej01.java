@@ -5,5 +5,6 @@ public class Ej01 {
 		
 		//Pedir al usuario una cadena y decir si empieza por el carácter ‘H’.
 		
+		
 	}
 }
