@@ -6,16 +6,8 @@ import java.util.Set;
 import agenda.modelo.Contacto;
 import agenda.modelo.Domicilio;
 import agenda.persistencia.ContactoDao;
-//import agenda.persistencia.ContactoDaoMemSerial;
 
 public class Contactos {
-	
-	
-//	public static void main(String[] args) {
-//		ContactoDao dao = new ContactoDaoMemSerial();
-//		dao.buscarTodos().forEach(System.out::println);
-//	}
-	
 	
 	public static Set<Contacto> generaContactos(){
 		Set<Contacto> contactos = new HashSet<Contacto>();

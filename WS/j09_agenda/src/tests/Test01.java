@@ -1,9 +1,10 @@
 package tests;
 
 public class Test01 {
-	
-	for(Contacto c : Contactos.generaContactos(){
-		System.out.println(c);
+	public static void main(String[] args) {
+		for(Contacto c : Contactos.generaContactos()) {
+			System.out.println(c);
+		}
 	}
 	
 }

@@ -75,8 +75,6 @@ public class Domicilio {
 	public void provincia(String provincia) {
 		this.provincia = provincia;
 	}
-
-	
 	
 	//Overrride solo de toString (no nesitaremos el resto (hashCode o equals)) para utilizar la clase
 	@Override
@@ -84,9 +82,6 @@ public class Domicilio {
 		return "Domicilio [tipoVia=" + tipoVia + ", via=" + via + ", numero=" + numero + ", piso=" + piso + ", puerta="
 				+ puerta + ", codigoPostal=" + codigoPostal + ", ciudad=" + ciudad + ", provincia=" + provincia + "]";
 	}
-	
-	
-	
 	
 	
 }
