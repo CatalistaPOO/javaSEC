@@ -24,7 +24,7 @@ public class Test02OtroOrder {
 //		});
 		
 		
-		//3-Lambda para crear TreeSet reducido al ser una u´nica innstruccion que recibe solo Strings
+		//3-Lambda para crear TreeSet reducido al ser una unica innstruccion que recibe solo Strings
 		//el cuerpo es solo una línea fuera llaves y si devuelve algo asume que es un return(fuera return y ; del final de instrucción
 		Set<String> set = new TreeSet<String>((o1, o2)-> o1.length() - o2.length());
 		

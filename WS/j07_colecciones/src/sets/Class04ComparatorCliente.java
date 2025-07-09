@@ -1,6 +1,7 @@
 package sets;
 
 import java.util.Iterator;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -17,15 +18,15 @@ public class Class04ComparatorCliente {
 		
 		
 		System.out.println("Orden natural de set: ");
-		Set<Cliente> set = new TreeSet<Cliente>();
-		set.add(c1);
-		set.add(c2);
-		set.add(c3);
-		set.add(c4);
-		set.add(c5);
+		Set<Cliente> clientes = new TreeSet<Cliente>();
+		clientes.add(c1);
+		clientes.add(c2);
+		clientes.add(c3);
+		clientes.add(c4);
+		clientes.add(c5);
 		
 		 
-		for (Cliente cliente : set) {
+		for (Cliente cliente : clientes) {
 			System.out.println(cliente);
 		}
 		System.out.println("-----");
@@ -35,14 +36,25 @@ public class Class04ComparatorCliente {
 		//creamos el TreeSet de tipo Cliente y usamos el método estático de la clase
 		//cliente para ordenar por apellido y finalmente por idCliente para indicar que usafremos ese orden en el objeto
 		//cuando lo "rellenamos" con addAll.
-		Set<Cliente> set02 = new TreeSet<Cliente>(Cliente.getComparatorApellidos());
-		set02.addAll(set);
+		Set<Cliente> clientes2 = new TreeSet<Cliente>(Cliente.getComparatorApellidos());
+		clientes2.addAll(clientes);
 		
-		for (Cliente cliente : set02) {
-			System.out.println(cliente);
+		for (Cliente cli : clientes) {
+			System.out.println(cli);
 		}
 		System.out.println();
 		
+		//Entry recoge pares de valor, un set de Entry sera todo el mapa en una Set
+		Set<Entry<Integer,Cliente>> entries = clientes.entrySet();//clientes.entrySet();
+		
+		System.out.println(entries.getClass().getName());
+		
+		for (Entry<Integer , Cliente> entrada : entries) {
+			System.out.println(entrada.getKey() + ":" + entrada.getValue());
+		}
+		
+		//Map ha incorporado el método ForEach
+		clientes.forEach((id,cli) -> System.out.println(id + ": " + cli))
 		
 	}
 }
