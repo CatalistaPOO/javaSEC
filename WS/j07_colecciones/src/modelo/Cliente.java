@@ -116,11 +116,8 @@ public class Cliente implements Comparable<Cliente> {//Implementa Comparable par
 				//para poder procesar los caracteres españoles cuando usemos compare
 				Collator col = Collator.getInstance(new Locale("es"));
 				return col.compare(nom1, nom2);
-		}
-		
-	};
-	
+			}
+		};
 	}
-	
 	
 }
