@@ -14,8 +14,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -27,23 +25,24 @@ public class Contacto implements Comparable<Contacto>, Cloneable,Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name ="idcontactos")
 	private int idContacto;
 	private String nombre;
 	private String apellidos;
 	private String apodo;
 	
 	@Embedded
-	@AttributeOverride(name = "tipoVia" , column = @Column(name="tipovia"))
-	@AttributeOverride(name = "codigoPostal", column = @Column(name="codigoPostal"))
+	@AttributeOverride(name = "tipoVia" , column = @Column(name="tipo_via"))
+	@AttributeOverride(name = "codigoPostal", column = @Column(name="codigo_postal"))
 	private Domicilio dom;
 	
 	@ElementCollection
-	@CollectionTable(name = "telefonos", joinColumns = {@JoinColumn(name = "idcontacto")})
+	@CollectionTable(name = "telefonos", joinColumns = {@JoinColumn(name = "fk_contacto")})
 	@Column(name = "telefono")
 	private Set<String> telefonos;
 	
 	@ElementCollection
-	@CollectionTable(name = "correos", joinColumns = {@JoinColumn(name = "idcontacto")})
+	@CollectionTable(name = "correos", joinColumns = {@JoinColumn(name = "fk_contacto")})
 	@Column(name = "correo")
 	private Set<String> correos;
 	
@@ -57,7 +56,7 @@ public class Contacto implements Comparable<Contacto>, Cloneable,Serializable {
 	
 	
 	public Contacto(int idContacto, String nombre, String apellidos, String apodo, Domicilio dom) {
-		super();
+		this();
 		this.idContacto = idContacto;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
@@ -76,8 +75,8 @@ public class Contacto implements Comparable<Contacto>, Cloneable,Serializable {
 		this.dom = dom;
 		this.idContacto = idContacto;
 //		Lee estos atributos del constructor principal
-//		this.telefonos = telefonos; 
-//		this.correos = correos;
+		this.telefonos = telefonos; 
+		this.correos = correos;
 	}
 
 	//Getters y Setters
@@ -132,7 +131,7 @@ public class Contacto implements Comparable<Contacto>, Cloneable,Serializable {
 		this.correos = correos;
 	}
 	//Este metodo sustituiría a set correos permitiendo la insercion de varios correos
-	public void addCorreos(String... coreeos) {
+	public void addCorreos(String... correos) {
 		for (String correo : correos) {
 			this.correos.add(correo);
 		}
